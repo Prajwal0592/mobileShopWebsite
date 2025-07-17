@@ -12,8 +12,8 @@ function Contact() {
           <p><b>Email:</b> <a href="mailto:info@mactechnewcastle.co.uk">info@mactechnewcastle.co.uk</a></p>
           <p>
             <b>Social:</b><br />
-            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a> | 
-            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100064955131523" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+            <a href="https://www.instagram.com/mactechnewcastle/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </p>
         </div>
         <div className="contact-form">
