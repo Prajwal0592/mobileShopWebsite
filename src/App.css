@@ -66,60 +66,101 @@ body {
   margin: 0 auto;
 }
 
+/* Updated section-title colors */
 .section-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 18px;
-  color: #23272f;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+/* Specific colors for key sections */
+.section-title.services {
+  color: #fed34a; /* Warm golden color for "Our Services" */
+  text-shadow: 0 0 5px rgba(254, 211, 74, 0.8);
+}
+
+.section-title.testimonials {
+  color: #4a90e2; /* Blue shade for "What Our Customers Say" */
+  text-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+}
+
+.section-title.contact {
+  color: #e62759; /* Bright pink-red for "Contact Us" */
+  text-shadow: 0 0 7px rgba(230, 39, 89, 0.8);
+}
+
+.services-list-bg-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 44px;
+}
+
+.services-slideshow-bg {
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.58;
+  transition: background-image 0.9s cubic-bezier(.4,0,.2,1);
+  min-height: 60vh;
+  filter: blur(2.5px) brightness(0.80) contrast(1.10);
+}
+
+.services-list-content {
+  position: relative;
+  z-index: 1;
+  padding: 64px 5vw 58px 5vw;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(36,48,88,0.26);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .services-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 28px;
   justify-content: center;
 }
 
 .service-card {
-  width: 215px;
-  background: rgba(255,255,255,0.8);
+  width: 220px;
+  background: rgba(255,255,255,0.87);
   border-radius: 15px;
-  box-shadow: 0 2px 12px 0 rgba(110,110,110,0.10);
+  box-shadow: 0 2px 12px 0 rgba(60,60,70,0.13);
   padding: 28px 18px;
-  transition: box-shadow 0.22s, transform 0.19s;
+  transition: box-shadow 0.22s, transform 0.19s, background 0.18s;
   text-align: center;
   margin: 12px 0;
+  color: #23272f;
+  backdrop-filter: blur(0.5px);
 }
-
 .service-card h3 {
   margin: 12px 0 6px 0;
-  font-size: 1.07em;
+  font-size: 1.09em;
+  font-weight: 600;
 }
 .service-card p {
-  color: #6b6b76;
-  font-size: .98em;
+  color: #5a5a76;
+  font-size: .97em;
 }
-
 .service-icon {
   width: 60px;
-}
-
-.services-guarantee {
-  text-align: center;
-  color: #38456A;
-  margin-top: 22px;
-}
-
-.guarantee-badge {
-  font-weight: 700;
-  color: #e62759;
+  margin-bottom: 10px;
 }
 
 .testimonials-section {
   background: #f0f1f3;
+  padding-top: 58px;
+  padding-bottom: 42px;
 }
+
 .testimonials-list {
   display: flex;
   flex-direction: row;
@@ -128,6 +169,13 @@ body {
   margin-top: 18px;
   flex-wrap: wrap;
 }
+
+/* Use the testimonial section-title with new color */
+.testimonials-section > .section-title {
+  color: #4a90e2; /* Blue shade for testimonial heading */
+  text-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+}
+
 .testimonial {
   background: #fff;
   border-radius: 15px;
@@ -145,7 +193,16 @@ body {
 
 .contact-section {
   background: #fdfbf6;
+  padding-top: 58px;
+  padding-bottom: 42px;
 }
+
+/* Use the contact section-title with new color */
+.contact-section > .section-title {
+  color: #e62759; /* Bright pink-red for contact heading */
+  text-shadow: 0 0 7px rgba(230, 39, 89, 0.8);
+}
+
 .contact-grid {
   display: flex;
   flex-wrap: wrap;
@@ -221,6 +278,24 @@ body {
 
 /* Responsive Design */
 @media (max-width: 900px) {
-  .services-list { flex-direction: column; align-items: center; }
-  .contact-grid { flex-direction: column; gap: 18px;}
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .services-list-content {
+    padding: 38px 3vw 38px 3vw;
+  }
+  .services-slideshow-bg {
+    min-height: 44vh;
+  }
+}
+.guarantee-badge-yellow {
+  background: #fed34a;
+  color: #23272f;
+  padding: 2px 10px 2.5px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-right: 6px;
+  box-shadow: 0 1.5px 6px 0 rgba(254,211,74,0.38);
 }
